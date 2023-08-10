@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		459A25762A84BD0D005DB3BC /* env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A25752A84BD0D005DB3BC /* env.swift */; };
+		459A25792A84C0C6005DB3BC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 459A25782A84C0C6005DB3BC /* Alamofire */; };
+		459A257C2A84C0D0005DB3BC /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 459A257B2A84C0D0005DB3BC /* SwiftyJSON */; };
 		45BD7AF32A84AEDD0078F48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD7AF22A84AEDD0078F48A /* AppDelegate.swift */; };
 		45BD7AF52A84AEDD0078F48A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD7AF42A84AEDD0078F48A /* SceneDelegate.swift */; };
 		45BD7AF72A84AEDD0078F48A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD7AF62A84AEDD0078F48A /* ViewController.swift */; };
@@ -17,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		459A25752A84BD0D005DB3BC /* env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = env.swift; sourceTree = "<group>"; };
 		45BD7AEF2A84AEDD0078F48A /* sesac-day18-translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sesac-day18-translator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BD7AF22A84AEDD0078F48A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45BD7AF42A84AEDD0078F48A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459A257C2A84C0D0005DB3BC /* SwiftyJSON in Frameworks */,
+				459A25792A84C0C6005DB3BC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,7 @@
 				45BD7AFB2A84AEDE0078F48A /* Assets.xcassets */,
 				45BD7AFD2A84AEDE0078F48A /* LaunchScreen.storyboard */,
 				45BD7B002A84AEDE0078F48A /* Info.plist */,
+				459A25752A84BD0D005DB3BC /* env.swift */,
 			);
 			path = "sesac-day18-translator";
 			sourceTree = "<group>";
@@ -86,6 +93,10 @@
 			dependencies = (
 			);
 			name = "sesac-day18-translator";
+			packageProductDependencies = (
+				459A25782A84C0C6005DB3BC /* Alamofire */,
+				459A257B2A84C0D0005DB3BC /* SwiftyJSON */,
+			);
 			productName = "sesac-day18-translator";
 			productReference = 45BD7AEF2A84AEDD0078F48A /* sesac-day18-translator.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +125,10 @@
 				Base,
 			);
 			mainGroup = 45BD7AE62A84AEDD0078F48A;
+			packageReferences = (
+				459A25772A84C0C6005DB3BC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				459A257A2A84C0D0005DB3BC /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 45BD7AF02A84AEDD0078F48A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45BD7AF72A84AEDD0078F48A /* ViewController.swift in Sources */,
+				459A25762A84BD0D005DB3BC /* env.swift in Sources */,
 				45BD7AF32A84AEDD0078F48A /* AppDelegate.swift in Sources */,
 				45BD7AF52A84AEDD0078F48A /* SceneDelegate.swift in Sources */,
 			);
@@ -362,6 +378,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		459A25772A84C0C6005DB3BC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		459A257A2A84C0D0005DB3BC /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		459A25782A84C0C6005DB3BC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 459A25772A84C0C6005DB3BC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		459A257B2A84C0D0005DB3BC /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 459A257A2A84C0D0005DB3BC /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45BD7AE72A84AEDD0078F48A /* Project object */;
 }

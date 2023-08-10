@@ -1,24 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sesac_day18_translator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TmE-ta-hWg">
+                                <rect key="frame" x="16" y="75" width="361" height="727"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mte-fH-tMk">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="27.333333333333332"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ZJ-0p-rxt">
+                                                <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hsN-Mk-eCS">
+                                                <rect key="frame" x="117.66666666666664" y="3" width="27.333333333333329" height="21.666666666666664"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hsN-Mk-eCS" secondAttribute="height" multiplier="1:1" id="egz-4Z-Zue"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNH-wi-peC">
+                                                <rect key="frame" x="153" y="0.0" width="109.33333333333331" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="319-rX-IbF">
+                                                <rect key="frame" x="270.33333333333331" y="0.0" width="90.666666666666686" height="27.333333333333332"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="translate"/>
+                                                <connections>
+                                                    <action selector="translateButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cf-4E-fR1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pNH-wi-peC" firstAttribute="width" secondItem="0ZJ-0p-rxt" secondAttribute="width" id="JF5-2V-xh6"/>
+                                        </constraints>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vW3-9V-LD6">
+                                        <rect key="frame" x="0.0" y="43.333333333333314" width="361" height="287"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XNM-WU-lCD">
+                                        <rect key="frame" x="0.0" y="346.33333333333331" width="361" height="34.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBK-eO-gvl">
+                                                <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Clear"/>
+                                                <connections>
+                                                    <action selector="clearButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSa-nX-bdb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWJ-mP-7ax">
+                                                <rect key="frame" x="184.66666666666663" y="0.0" width="176.33333333333337" height="34.333333333333336"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="언어 감지"/>
+                                                <connections>
+                                                    <action selector="languageDetect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1RO-hx-5tp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="SWJ-mP-7ax" firstAttribute="width" secondItem="CBK-eO-gvl" secondAttribute="width" multiplier="0.998155" id="XO0-X6-jCb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTb-VN-fn5">
+                                        <rect key="frame" x="0.0" y="396.66666666666669" width="361" height="27.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="roT-2I-YRB">
+                                        <rect key="frame" x="0.0" y="440" width="361" height="287"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="roT-2I-YRB" firstAttribute="width" secondItem="TmE-ta-hWg" secondAttribute="width" id="C75-Kk-ahI"/>
+                                    <constraint firstItem="vW3-9V-LD6" firstAttribute="width" secondItem="TmE-ta-hWg" secondAttribute="width" id="EDm-uI-cRL"/>
+                                    <constraint firstItem="XNM-WU-lCD" firstAttribute="width" secondItem="TmE-ta-hWg" secondAttribute="width" id="FEI-WA-Spe"/>
+                                    <constraint firstItem="UTb-VN-fn5" firstAttribute="width" secondItem="TmE-ta-hWg" secondAttribute="width" id="azA-Os-igY"/>
+                                    <constraint firstItem="roT-2I-YRB" firstAttribute="height" secondItem="vW3-9V-LD6" secondAttribute="height" id="dkh-5J-chJ"/>
+                                    <constraint firstItem="UTb-VN-fn5" firstAttribute="height" secondItem="mte-fH-tMk" secondAttribute="height" id="ff7-LD-FUe"/>
+                                    <constraint firstItem="mte-fH-tMk" firstAttribute="width" secondItem="TmE-ta-hWg" secondAttribute="width" id="y0H-PN-2lE"/>
+                                </constraints>
+                            </stackView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1S-Co7">
+                                <rect key="frame" x="0.0" y="618" width="393" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="iuv-xH-ZtX"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KQZ-1S-Co7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="E2Q-uw-zEx"/>
+                            <constraint firstAttribute="trailing" secondItem="TmE-ta-hWg" secondAttribute="trailing" constant="16" id="G7w-73-Bab"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TmE-ta-hWg" secondAttribute="bottom" constant="16" id="KMV-jA-HhZ"/>
+                            <constraint firstItem="TmE-ta-hWg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UrR-KE-dVC"/>
+                            <constraint firstItem="KQZ-1S-Co7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VBY-OS-C1t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KQZ-1S-Co7" secondAttribute="bottom" id="Wxs-PI-aLZ"/>
+                            <constraint firstItem="TmE-ta-hWg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="pDi-St-MZy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clearButton" destination="CBK-eO-gvl" id="SKL-QZ-E8x"/>
+                        <outlet property="detectLangButton" destination="SWJ-mP-7ax" id="ZVt-2W-DWZ"/>
+                        <outlet property="fromLangInput" destination="0ZJ-0p-rxt" id="CAW-YE-oPe"/>
+                        <outlet property="fromText" destination="vW3-9V-LD6" id="YbG-2R-A9t"/>
+                        <outlet property="toLangInput" destination="pNH-wi-peC" id="9ij-g9-ggu"/>
+                        <outlet property="toLangLabel" destination="UTb-VN-fn5" id="YYG-09-8Y4"/>
+                        <outlet property="toText" destination="roT-2I-YRB" id="0gx-6f-zRZ"/>
+                        <outlet property="translateButton" destination="319-rX-IbF" id="yvC-eX-9Pf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="103" y="1"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.forward" catalog="system" width="128" height="95"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
